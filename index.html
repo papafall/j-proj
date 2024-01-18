@@ -8,8 +8,11 @@
     <!-- <link rel="stylesheet" href="style.css" /> -->
     <head>
       <body>
+        <button id="clickme">Enter name</button>
+        <div id="greeting"></div>
         <script>
-          const button = document.querySelector("button");
+          /* // button asking name
+          const button = document.getElementById("clickme");
 
           function greet() {
             const name = prompt("What is your name, cutie?");
@@ -18,9 +21,18 @@
           }
 
           button.addEventListener("click", greet);
+          */
+
+          //percentage calculator
+
+          const song = "Fight the Youth";
+          const score = Number(prompt("How would score this?"));
+          const highestScore = 10;
+          const output = `I like the song ${song}. I gave it a score of ${
+            (score / highestScore) * 100
+          }%.`;
+          console.log(output);
         </script>
-        <button>Enter name</button>
-        <div id="greeting"></div>
       </body>
     </head>
   </head>
