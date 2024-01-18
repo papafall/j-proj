@@ -10,28 +10,104 @@
       <body>
         <button id="clickme">Enter name</button>
         <div id="greeting"></div>
+
+        <h3>Make a selection below</h3>
+        <div>
+          <select id="weather">
+            <option value="">---</option>
+            <option value="sunny">Sunny</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowy">Snowy</option>
+            <option value="overcast">Overcast</option>
+          </select>
+        </div>
+        <p>
+          <span style="font-weight: 700">Forcast:</span>
+          <span id="forcast">Testing-testing</span>
+        </p>
         <script>
           /* // button asking name
-          const button = document.getElementById("clickme");
+            const button = document.getElementById("clickme");
 
-          function greet() {
-            const name = prompt("What is your name, cutie?");
-            const greeting = document.querySelector("#greeting");
-            greeting.textContent = `Hello ${name}, nice to see you!`;
-          }
+            function greet() {
+              const name = prompt("What is your name, cutie?");
+              const greeting = document.querySelector("#greeting");
+              greeting.textContent = `Hello ${name}, nice to see you!`;
+            }
 
-          button.addEventListener("click", greet);
-          */
+            button.addEventListener("click", greet);
+            */
 
           //percentage calculator
 
-          const song = "Fight the Youth";
-          const score = Number(prompt("How would score this?"));
-          const highestScore = 10;
-          const output = `I like the song ${song}. I gave it a score of ${
-            (score / highestScore) * 100
-          }%.`;
-          console.log(output);
+          /*
+            const song = "Fight the Youth";
+            const score = Number(prompt("How would score this?"));
+            const highestScore = 10;
+            const output = `I like the song ${song}. I gave it a score of ${
+              (score / highestScore) * 100
+            }%.`;
+            console.log(output);
+            */
+
+          //Extracting String Characters
+
+          /*
+          let text = "hello world";
+            let char = text.charAt(2);
+
+            char = text.charCodeAt(0);
+
+            char = text.at(6);
+
+            char = text[7];
+            console.log(char);
+            */
+
+          /*
+            let text = "Apple, banana, kiwi";
+            let part = text.slice(7, 13);
+
+            newText = part;
+
+            console.log(newText);
+            */
+
+          //Wheather condition forcast
+          const condition = document.querySelector("select");
+          const forcast = document.querySelector("#forcast");
+
+          const sunnyForcast =
+            "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
+
+          const rainyForcast =
+            "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
+
+          const snowyFrocast =
+            "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
+
+          const overcastFrocast =
+            "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
+
+          condition.addEventListener("change", currentWeather);
+
+          function currentWeather() {
+            const choice = condition.value;
+            if (choice === "sunny") {
+              forcast.textContent = sunnyForcast;
+            } else if (choice === "rainy") {
+              forcast.textContent = rainyForcast;
+            } else if (choice === "snowy") {
+              forcast.textContent = snowyFrocast;
+            } else if (choice === "overcast") {
+              forcast.textContent = overcastFrocast;
+            } else {
+              forcast.textContent =
+                "Select an option above to see forcast message";
+            }
+          }
+
+          currentWeather();
         </script>
       </body>
     </head>
