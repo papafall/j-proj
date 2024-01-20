@@ -8,28 +8,32 @@
     <link rel="stylesheet" href="style.css" />
     <head>
       <body>
-        <button id="clickme">Enter name</button>
-        <div id="greeting"></div>
-        <div id="weatherCast" class="gameBox">
-          <h3>Make a selection below</h3>
-          <div>
-            <select id="weather">
-              <option value="">---</option>
-              <option value="sunny">Sunny</option>
-              <option value="rainy">Rainy</option>
-              <option value="snowy">Snowy</option>
-              <option value="overcast">Overcast</option>
-            </select>
+        <div id="weatherplay">
+          <button id="clickme">Enter name</button>
+          <div id="greeting"></div>
+          <div id="weatherCast" class="gameBox">
+            <h3>Make a selection below</h3>
+            <div>
+              <select id="weather">
+                <option value="">---</option>
+                <option value="sunny">Sunny</option>
+                <option value="rainy">Rainy</option>
+                <option value="snowy">Snowy</option>
+                <option value="overcast">Overcast</option>
+              </select>
+            </div>
+            <p>
+              <span style="font-weight: 700">Forcast:</span>
+              <span id="forcast">Testing-testing</span>
+            </p>
           </div>
-          <p>
-            <span style="font-weight: 700">Forcast:</span>
-            <span id="forcast">Testing-testing</span>
-          </p>
         </div>
         <div id="FizGame" class="gameBox">
           <h3>Play FizzBuzz - Press the button below to spin</h3>
           <button id="spinButton">Spin</button>
           <p id="spinResult"></p>
+          <p><span id="timer">10</span> tries left</p>
+          <button id="reload" onclick="location.reload()">Restart</button>
         </div>
         <script src="script.js"></script>
       </body>
